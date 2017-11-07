@@ -5,16 +5,18 @@
 #### Build Setup
 
 ``` bash
-# install dependencies
+# 安装依赖包
 npm install
+#可能需要加前缀
+ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ npm install
 
-# serve with hot reload at localhost:9080
+# 启动开发服务和热加载 ip地址：localhost:9080
 npm run dev
 
-# build electron application for production
+# 构建electron应用
 npm run build
 
-# run end-to-end tests
+# 运行测试脚本
 npm test
 
 
@@ -22,4 +24,3 @@ npm test
 
 ---
 
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
