@@ -1,0 +1,28 @@
+	html,body{
+		height:100%;
+	}
+	body{
+		min-height: 100%;
+	}
+	#app{
+		height:100%;
+	}
+	* {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	}
+	
+	a {
+	    text-decoration: none;
+	    color: #FFF;
+	}
+	
+	body {
+	    background: #512e92;
+	    font-family: SourceSansLocal, source-sans-pro, Source Sans Pro, -apple-system, Roboto, pt sans, calibri, sans-serif;
+	}
+	
+	input[type="button"] {
+	    -webkit-appearance: none;
+	}
