@@ -94,7 +94,12 @@ let webConfig = {
   resolve: {
     alias: {
       '@': path.join(__dirname, '../src/renderer'),
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      "status": path.join(process.cwd(), "src/renderer/status"),
+      "tools": path.join(process.cwd(), "src/renderer/tools"),
+      "network": path.join(process.cwd(), "src/renderer/network"),
+      "config": path.join(process.cwd(), "src/renderer/config"),
+      "view": path.join(process.cwd(), "src/renderer/view")
     },
     extensions: ['.js', '.vue', '.json', '.css']
   },
@@ -117,7 +122,8 @@ if (process.env.NODE_ENV === 'production') {
       }
     ]),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
+      'process.env.NODE_ENV': '"production"',
+       URLENV: `"pro"`
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true

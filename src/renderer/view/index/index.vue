@@ -133,7 +133,7 @@
 </template>
 
 <script>
-    import StockChart from "status/js/stock-chart.js";
+   
     
     import {
         webSocketResolve

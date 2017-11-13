@@ -28,7 +28,7 @@ function createWindow() {
 
     mainWindow.loadURL(winURL)
     
-    dialog.showErrorBox("错误标题", winURL)
+  
     mainWindow.on('closed', () => {
         mainWindow = null
     })
