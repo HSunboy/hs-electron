@@ -1,5 +1,7 @@
 # hs-electron
 
+![[Build Status](https://travis-ci.org/HSunboy/hs-electron.svg?branch=master)](https://travis-ci.org/HSunboy/hs-electron)
+
 > An electron-vue project
 
 #### Build Setup
