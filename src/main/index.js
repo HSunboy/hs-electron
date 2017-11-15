@@ -1,4 +1,5 @@
-import { app, BrowserWindow, screen,dialog } from 'electron'
+import { app, BrowserWindow, screen,dialog,Menu } from 'electron'
+import menuUtil from "./util/menu.js";
 
 /**
  * Set `__static` path to static files in production
@@ -7,6 +8,8 @@ import { app, BrowserWindow, screen,dialog } from 'electron'
 if (process.env.NODE_ENV !== 'development') {
     global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
+
+
 
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development' ?
@@ -17,6 +20,7 @@ function createWindow() {
     /**
      * Initial window options
      */
+    menuUtil();
     var size = screen.getPrimaryDisplay().workAreaSize
     mainWindow = new BrowserWindow({
         height: size.height,
@@ -32,6 +36,7 @@ function createWindow() {
     mainWindow.on('closed', () => {
         mainWindow = null
     })
+    
 }
 
 app.on('ready', createWindow)
